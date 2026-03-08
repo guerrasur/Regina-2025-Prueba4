@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Regina 2025 - Entrevistas</title>
+    <style>
+        /* Estilo básico y limpio para lectura */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        section {
+            display: none; /* Oculta todas las secciones por defecto */
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        /* Esta es la "magia": muestra solo la sección que coincide con el enlace */
+        section:target {
+            display: block;
+        }
+        /* Estilo para el mensaje de bienvenida cuando no hay enlace específico */
+        #inicio {
+            display: block;
+        }
+        #inicio:has(~ section:target) {
+            display: none;
+        }
+        h1 { color: #2c3e50; }
+        .back-link { display: inline-block; margin-top: 20px; color: #3498db; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div id="inicio">
+        <h1>Repositorio de Entrevistas - Regina 2025</h1>
+        <p>Por favor, utiliza el enlace directo que se te proporcionó para acceder a la entrevista correspondiente.</p>
+    </div>
+
+    <section id="entrevista1">
+        <h1>Entrevista #1: [Nombre del Candidato]</h1>
+        <p><strong>Fecha:</strong> 08 de Marzo, 2026</p>
+        <hr>
+        <p>Aquí va el contenido detallado de la primera entrevista. Puedes escribir párrafos, listas o lo que necesites.</p>
+        <a class="back-link" href="#">← Volver al inicio</a>
+    </section>
+
+    <section id="entrevista2">
+        <h1>Entrevista #2: [Nombre del Candidato]</h1>
+        <p><strong>Fecha:</strong> 08 de Marzo, 2026</p>
+        <hr>
+        <p>Este es el contenido de la segunda entrevista. Al entrar con el enlace 2, el usuario verá esto directamente.</p>
+        <a class="back-link" href="#">← Volver al inicio</a>
+    </section>
+
+    </body>
+</html>
