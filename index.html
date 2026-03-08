@@ -3,59 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Regina 2025 - Entrevistas</title>
+    <title>Regina 2025 - Panel de Entrevistas</title>
     <style>
-        /* Estilo básico y limpio para lectura */
+        /* Configuración visual general */
         body {
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
+            padding: 40px 20px;
+            background-color: #f4f7f6;
+            color: #2c3e50;
         }
-        section {
-            display: none; /* Oculta todas las secciones por defecto */
-            padding: 40px 0;
-            border-bottom: 1px solid #eee;
+
+        /* Títulos */
+        h1 { border-bottom: 2px solid #3498db; padding-bottom: 10px; color: #2980b9; }
+
+        /* Estilo de los Botones */
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            transition: background 0.3s;
+            font-weight: bold;
         }
-        /* Esta es la "magia": muestra solo la sección que coincide con el enlace */
-        section:target {
-            display: block;
+        .btn:hover { background: #2980b9; }
+        
+        .btn-volver {
+            background: #7f8c8d;
+            margin-top: 30px;
         }
-        /* Estilo para el mensaje de bienvenida cuando no hay enlace específico */
-        #inicio {
-            display: block;
+        .btn-volver:hover { background: #95a5a6; }
+
+        /* Lógica de visualización */
+        .seccion-entrevista {
+            display: none; /* Oculto por defecto */
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        #inicio:has(~ section:target) {
+
+        #menu-principal {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Magia: Si hay un "target" (enlace activo), oculta el menú y muestra la sección */
+        :target {
+            display: block !important;
+        }
+        
+        /* Oculta el menú principal solo cuando una entrevista está activa */
+        body:has(section:target) #menu-principal {
             display: none;
         }
-        h1 { color: #2c3e50; }
-        .back-link { display: inline-block; margin-top: 20px; color: #3498db; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <div id="inicio">
-        <h1>Repositorio de Entrevistas - Regina 2025</h1>
-        <p>Por favor, utiliza el enlace directo que se te proporcionó para acceder a la entrevista correspondiente.</p>
+    <div id="menu-principal">
+        <h1>Proyecto Regina 2025</h1>
+        <p>Seleccione la entrevista que desea revisar:</p>
+        <div style="margin-top: 30px;">
+            <a href="#entrevista1" class="btn">Ir a Entrevista #1</a>
+            <a href="#entrevista2" class="btn">Ir a Entrevista #2</a>
+            <a href="#entrevista3" class="btn">Ir a Entrevista #3</a>
+        </div>
     </div>
 
-    <section id="entrevista1">
-        <h1>Entrevista #1: [Nombre del Candidato]</h1>
-        <p><strong>Fecha:</strong> 08 de Marzo, 2026</p>
+    <section id="entrevista1" class="seccion-entrevista">
+        <h1>Entrevista #1: Análisis Conceptual</h1>
+        <p><strong>Estado:</strong> Completada</p>
         <hr>
-        <p>Aquí va el contenido detallado de la primera entrevista. Puedes escribir párrafos, listas o lo que necesites.</p>
-        <a class="back-link" href="#">← Volver al inicio</a>
+        <p>Aquí puedes detallar todo el contenido de la primera entrevista. Puntos clave, objetivos y resultados del Proyecto Regina.</p>
+        
+        <a href="#" class="btn btn-volver">← Todas las entrevistas</a>
     </section>
 
-    <section id="entrevista2">
-        <h1>Entrevista #2: [Nombre del Candidato]</h1>
-        <p><strong>Fecha:</strong> 08 de Marzo, 2026</p>
+    <section id="entrevista2" class="seccion-entrevista">
+        <h1>Entrevista #2: Desarrollo Técnico</h1>
+        <p><strong>Estado:</strong> En proceso</p>
         <hr>
-        <p>Este es el contenido de la segunda entrevista. Al entrar con el enlace 2, el usuario verá esto directamente.</p>
-        <a class="back-link" href="#">← Volver al inicio</a>
+        <p>Contenido relacionado con la segunda etapa de entrevistas. Ideal para perfiles técnicos o de diseño.</p>
+        
+        <a href="#" class="btn btn-volver">← Todas las entrevistas</a>
     </section>
 
-    </body>
+    <section id="entrevista3" class="seccion-entrevista">
+        <h1>Entrevista #3: Feedback Final</h1>
+        <p><strong>Estado:</strong> Pendiente</p>
+        <hr>
+        <p>Espacio para conclusiones y cierre del ciclo Regina 2025.</p>
+        
+        <a href="#" class="btn btn-volver">← Todas las entrevistas</a>
+    </section>
+
+</body>
 </html>
