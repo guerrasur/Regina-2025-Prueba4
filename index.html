@@ -3,6 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regina 2025 - Entrevistas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f4f7f6;
+            color: #2c3e50;
+        }
+
+        h1 { border-bottom: 2px solid #3498db; padding-bottom: 10px; color: #2980b9; }
+
+        /* Contenedor para que el video sea responsivo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-bottom: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        .btn:hover { background: #2980b9; }
+        
+        .btn-volver {
+            background: #7f8c8d;
+            margin-top: 10px;
+        }
+        .btn-volver:hover { background: #95a5a6; }
+
+        .seccion-entrevista {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        #menu-principal {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        :target {
+            display: block !important;
+        }
+        
+        body:has(section:target) #menu-principal {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu-principal">
+        <h1>Proyecto Regina 2025</h1>
+        <p>Seleccione el video del entrevistado:</p>
+        <div style="margin-top: 30px;">
+            <a href="#entrevista1" class="btn">Entrevistado 1</a>
+            <a href="#entrevista2" class="btn">Entrevistado 2</a>
+            <a href="#entrevista3" class="btn">Entrevistado 3</a>
+        </div>
+    </div>
+
+    <section id="entrevista1" class="seccion-entrevista">
+        <h1>Entrevistado 1</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/H438c4ZVJl0?si=0__Zf1uZOAYx_Cfm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <a href="#" class="btn btn-volver">← Todas las entrevistas</a>
+    </section>
+
+    <section id="entrevista2" class="seccion-entrevista">
+        <h1>Entrevistado 2</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/GVI7qk2YhAg?si=1oSR8zGlh55Gu_r8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <a href="#" class="btn btn-volver">← Todas las entrevistas</a>
+    </section>
+
+    <section id="entrevista3" class="seccion-entrevista">
+        <h1>Entrevistado 3</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/T3LN97dIJks?si=kZu8FthSbyWoGGEg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <a href="#" class="btn btn-volver">← Todas las entrevistas</a>
+    </section>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regina 2025 - Panel de Entrevistas</title>
     <style>
         /* Configuración visual general */
